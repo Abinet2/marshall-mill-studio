@@ -1,6 +1,5 @@
 h1, h2, h3, h4 {
    font-family: roboto;
-   margin: 25px 0;
 }
 
 body {
@@ -9,12 +8,26 @@ body {
     margin: 0 auto;
 }
 
+/* Nav Menu */
+nav ul {
+    display: flex;
+    background-color: #f1f1f1;
+    list-style-type: none;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    padding: 1% 1.5%;
+    margin: 0% 2% 0px 0px;
+}
+nav ul li a {
+    text-decoration: none
+}
 p {
     line-height: 1.4;
 }
 
 header img{
-    width: 200px;
     border: 5px solid white;
     border-radius: 50%;
     padding: 3px;
@@ -26,54 +39,99 @@ header {
     text-align: center;
 }
 
-/*the three */
-
-.threee{
-    max-width: 1280px;
-    margin: 0 auto;
-    background: url(images/swirl.png);
-    background-repeat: repeat;
+@media screen and (max-width: 800px) {
+    header {
+        padding: 50px 10px;
+    }
 }
+/* what to Expect */
 
-.the3 {
-    float:left;
-    margin: 20px;
-    width: 300px;
-    border-radius: 50%;
-}
-.the3:hover {
-    border: 5px solid green;
-}
-
-.the33 {
-    clear: both;
-    overflow: auto;
-    margin: 100px;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-/* table */
-
-section.sec {
+.expect {
+    text-align: center;
     background-color: #bdd5ea; 
     padding-top: 20px; 
     padding-bottom: 50px;
     clear: both;
 }
+.expect ul {
+    padding: 0%;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
-table {
+/*.expect ul { 
+        flex-direction: column;
+        align-items: center;
+    } */
+
+/*the three */
+
+.threee{
     max-width: 1280px;
     margin: 0 auto;
+    padding: 1px 100px;
+    background: url(images/swirl.png);
+    background-repeat: repeat;
+}
+
+.the33 {
+    padding: 50px;
+    clear: both;
+    overflow: auto;
+}
+
+.the3 {
+    float:left;
+    padding: 1px;
+    border-radius: 50%;
+    margin: 20px;
+}
+.the3.right{
+    float: right;
+}
+.the3:hover {
+    border: 5px solid green;
+}
+
+@media screen and (max-width:800px) {
+    img.the3, .the3.right {
+        float: none;
+    }
+}
+/* mobile */
+@media screen and (max-width: 650px) {
+    img.the3 {
+        display: none;
+    } 
+}
+
+/* {
+    box-sizing: border-box;
+}*/
+
+/* table */
+
+.table {
+    text-align: center;
+    background-color: #bdd5ea; 
+    padding-top: 20px; 
+    padding-bottom: 50px;
+    
+}
+
+.table table {
+    max-width: 1280px;
+    margin: 0;
+    padding: 1% 15%;
+    
 }
 
  tr, th, td {
     background-color: white;
     text-align: center;
     padding: 20px;
-    width: 400px;
 }
 
 th {
@@ -93,72 +151,75 @@ td>a:hover{
     background-color: orange;
 }
 
-/* speakers */
+/* Speakers */
 
 .speakers{
     max-width: 1280px;
     margin: 0 auto;
+    padding: 1px 40px 1px;
 }
 
-div.box1 {
+
+div.box {
     float:left;
     width: 50%;
     padding-bottom: 50px;
-   
-}
-div.box2 {
-    float: right;
-    width: 50%;
-    padding-bottom: 50px;
+    }
 
-}
-
-.boxx1 {
-    margin: 10px 10px;
+.boxx {
+    margin: 10px;
     padding-top: 20px;
     box-shadow: 1px 1px 2px 2px #e9e9e9;
 }
-
-.boxx2 {
-    margin: 10px 10px;
-    padding-top: 20px;
-    box-shadow: 1px 1px 2px 2px #e9e9e9;
-}
-
 
 div.clear {
     clear: both;
     overflow: auto;
-    padding: 5px 3px 30px 40px;
-}
-
-div.clear2 {
-    clear: both;
-    overflow: auto;
-    padding: 5px 3px 30px 40px;
-
+    padding: 5px 10px 30px 40px;
+    /*text-align: justify;*/
 }
 
 img.float {
-    width: 150px;
     float: left;
     border-radius: 50%;
     margin-right: 30px;
     margin-bottom: 20px;
 }
 
-footer {
-    text-align: center;
-    background-color: #495867;
-    color: white;
-    padding: 20px;
-} 
-
-.sec.last{
-    text-align: center;
+#speakers {
+    font-weight: bold;
 }
 
-.sec.last a{
+@media screen and (max-width:800px) {
+    .speakers {
+        padding: 1px 15px;
+    }
+    div.clear {
+        padding: 10px 10px 40px 10px;
+    }
+    img.float {
+        float: none;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    img.float {
+        display: none;
+    } 
+}
+
+/* last section*/
+
+.last-sec {
+    text-align: center;
+    background-color: #bdd5ea; 
+    padding-top: 20px; 
+    padding-bottom: 50px;
+    clear: both;
+}
+
+.last-sec a{
     color: white;
     text-decoration: none;
     padding: 5px 15px;
@@ -166,8 +227,14 @@ footer {
     border-radius: 5px; 
 }
 
+footer {
+    text-align: center;
+    background-color: #495867;
+    color: white;
+    padding: 20px;
+}
 
-/* Ticket */
+/* Ticket Page*/
 
 form {
     width: 400px;
@@ -188,3 +255,5 @@ input[type="submit"] {
     border-radius: 8px;
     background-color: #ff6600;
 }
+
+/* RWD */
